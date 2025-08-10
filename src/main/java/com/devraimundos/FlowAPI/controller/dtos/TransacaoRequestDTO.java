@@ -1,4 +1,7 @@
 package com.devraimundos.FlowAPI.controller.dtos;
 
-public record TransacaoRequestDTO() {
+import java.time.OffsetDateTime;
+
+public record TransacaoRequestDTO(Double valor, OffsetDateTime dataHora) {
+
 }
