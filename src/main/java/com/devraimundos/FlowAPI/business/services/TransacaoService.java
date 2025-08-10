@@ -16,12 +16,20 @@ import java.util.List;
 public class TransacaoService {
     private final List<TransacaoRequestDTO> listaTransacoes = new ArrayList<>();
 
-    log.info("Gravando Transações");
-
     public void adicionarTransacoes(TransacaoRequestDTO dto) {
+
+        log.info("Gravando Transações");
+
         if (dto.dataHora().isAfter(OffsetDateTime.now())) {
+            log.error("Data e hora maiores que a data atual");
             throw new UnprocessableEntity("Data de hora invalido");
         }
-    }
 
+        if (dto.valor() < 0) {
+            log.error("Valor não pode ser negativo");
+            throw new UnprocessableEntity("Valor não pode ser negativo");
+        }
+
+        listaTransacoes.add(dto);
+    }
 }
