@@ -98,8 +98,3 @@ Quando não houver transações no período, todos os valores retornam **0**.
 **Raimundos Neto**
 💻 Desenvolvedor Back-End | Java | Spring Boot
 
----
-
-Se quiser, posso criar **uma versão com badges e seções visuais** para dar mais impacto e “cara de projeto corporativo”, o que pode contar pontos extras na avaliação.
-
-Quer que eu já faça essa versão aprimorada?
